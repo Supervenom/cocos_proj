@@ -1,0 +1,29 @@
+#Creare progetto
+
+Usage: create_project.py -n <PROJECT_NAME> -k <PACKAGE_NAME> -l <cpp|lua|javascript> -p <PROJECT_PATH>
+
+./create_project.py -n prova -k com.prova -l cpp -p ~/cocos_proj
+
+#Compilare con XCode per Mac e iOS il progetto appena creato
+
+#Aggiornare target progetto android
+
+android update project -t android-19 -p . #In DIR_PROJ/android.proj
+android update project -t android-19 -p . #In DIR_PROJ/cocos2d/cocos/2d/platform/android/java/
+
+
+#Complilare i file nativi Android
+
+./build_native.py
+
+#Compilare APK
+
+ant debug
+
+#Installare apk
+
+adb install bin/prova.apk
+
+
+
+
